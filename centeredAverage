@@ -1,0 +1,21 @@
+public int centeredAverage(int[] nums) {
+ int  biggest=0;
+ int  smallest= 10000;
+  int total = 0;
+  
+  if(nums.length > 0){
+    for(int i = 0;i<nums.length;i++){
+     
+    biggest =  Math.max(biggest,nums[i]);
+    smallest = Math.min(smallest,nums[i]);
+     total += nums[i];
+
+      
+    }
+  }
+  total-= biggest;
+  total-= smallest;
+  
+  return total/(nums.length-2);
+  
+}
